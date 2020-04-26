@@ -1,8 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { askForPermissioToReceiveNotifications } from './push-notification';
+
 
 function App() {
+
+  React.useEffect(()=>{
+    askForPermissioToReceiveNotifications()
+  },[])
+
+
   return (
     <div className="App">
       <header className="App-header">
