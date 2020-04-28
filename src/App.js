@@ -24,7 +24,7 @@ function App() {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					Get directions Hello
+					Get directions Hi
 				</a>
 			</header>
 		</div>
