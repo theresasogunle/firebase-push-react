@@ -2,12 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { askForPermissioToReceiveNotifications } from './push-notification';
+import { requestCurrentPosition } from './location';
 
 
 function App() {
 
   React.useEffect(()=>{
     askForPermissioToReceiveNotifications()
+    requestCurrentPosition();
   },[])
 
 
@@ -20,11 +22,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href={`https://www.google.com/maps/dir/6.5568767999999995,3.3488895999999997/6.412850,4.087600`}
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+         Get directions
         </a>
       </header>
     </div>
