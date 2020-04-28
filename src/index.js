@@ -11,5 +11,18 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-serviceWorker.register({ skipWaiting: true });
+serviceWorker.register({
+  onUpdate: registration => {
+    const waitingServiceWorker = registration.waiting
+
+    if (waitingServiceWorker) {
+      waitingServiceWorker.addEventListener("statechange", event => {
+        if (event.target.state === "activated") {
+          window.location.reload()
+        }
+      });
+      waitingServiceWorker.postMessage({ type: "SKIP_WAITING" });
+    }
+  }
+});
 initializeFirebase()
