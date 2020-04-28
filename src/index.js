@@ -11,5 +11,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-serviceWorker.register();
+serviceWorker.register({ skipWaiting: true });
 initializeFirebase()
