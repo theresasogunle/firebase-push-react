@@ -24,7 +24,7 @@ function App() {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					Get directions Just pushed the lastest update
+					Get directions Just pushed the lastest update Vesion 2
 				</a>
 			</header>
 		</div>
